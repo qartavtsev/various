@@ -36,7 +36,7 @@ env:
   ALLURE_TESTPLAN_PATH: "./testplan.json"
 
 jobs:
-  tests:
+  java_autotests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -55,7 +55,7 @@ jobs:
           ALLURE_PROJECT_ID: ${{ github.event.inputs.ALLURE_PROJECT_ID}}
           ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
           ALLURECTL_VERSION: ${{ github.event.inputs.ALLURECTL_VERSION }}
-          ALLURE_LAUNCH_NAME: 'GitHub - Test Run #${{ github.run_number }}'
+          ALLURE_LAUNCH_NAME: "GitHub - Test Run #${{ github.run_number }}"
           
       - name: Run tests
         run: |
@@ -65,6 +65,7 @@ jobs:
           ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
           ALLURE_RESULTS: "build/allure-results"
           ALLURE_TESTPLAN_PATH: "./testplan.json"
+          ALLURE_LAUNCH_NAME: "GitHub - Test Run #${{ github.run_number }}"
           BRANCH: ${{ github.ref_name }}
           BROWSER: ${{ github.event.inputs.BROWSER}}
           ENDPOINT: ${{ github.event.inputs.ENDPOINT}}
