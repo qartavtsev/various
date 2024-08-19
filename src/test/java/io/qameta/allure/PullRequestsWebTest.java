@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-@Owner("akarth")
 @Feature("Pull Requests")
 
 public class PullRequestsWebTest {
@@ -25,10 +24,8 @@ public class PullRequestsWebTest {
     }
 
     @Test
-    @TM4J("AE-T6")
     @Story("Create new pull request")
-    @Tags({@Tag("web")})
-    @DisplayName("[13] Creating new issue for authorized user")
+    @DisplayName("[16] Create new pull request for authorized user")
     public void shouldCreatePullRequest() {
         steps.openPullRequestsPage(OWNER, REPO);
         steps.createPullRequestFromBranch(BRANCH);
@@ -36,10 +33,8 @@ public class PullRequestsWebTest {
     }
 
     @Test
-    @TM4J("AE-T7")
     @Story("Close existing pull request")
-    @Tags({@Tag("web")})
-    @DisplayName(" [15] Deleting existing issue for authorized user")
+    @DisplayName("[17] Close existing pull request for authorized user")
     public void shouldClosePullRequest() {
         steps.openPullRequestsPage(OWNER, REPO);
         steps.createPullRequestFromBranch(BRANCH);
