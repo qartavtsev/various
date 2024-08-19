@@ -7,7 +7,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 @Feature("Issues")
-@Layer("API Tests")
 
 public class IssuesRestTest {
 
@@ -16,7 +15,7 @@ public class IssuesRestTest {
 
     private final RestSteps steps = new RestSteps();
 
-    @Story("Create new issue")
+    @Story("Creating new issue")
     @DisplayName("[16] Create issue via api")
     @ParameterizedTest(name = " (parameterized)")
     @ValueSource(strings = {"First Note", "Second Note"})
@@ -25,7 +24,7 @@ public class IssuesRestTest {
         steps.shouldSeeIssueWithTitle(OWNER, REPO, title);
     }
 
-    @Story("Close existing issue")
+    @Story("Closing existing issue")
     @DisplayName("[17] Close issue via api")
     @ParameterizedTest(name = " (parameterized)")
     @ValueSource(strings = {"First Note", "Second Note"})
