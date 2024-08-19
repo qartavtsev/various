@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 @Feature("Issues")
+@Layer("UI Tests")
 
 public class IssuesWebTest {
 
