@@ -15,8 +15,8 @@ public class IssuesRestTest {
 
     private final RestSteps steps = new RestSteps();
 
-    @Story("Creating new issue")
-    @DisplayName("[16] Create issue via api")
+    @Story("Create new issue")
+    @DisplayName("[13] Create new issue via API")
     @ParameterizedTest(name = " (parameterized)")
     @ValueSource(strings = {"First Note", "Second Note"})
     public void shouldCreateUserNote(@Param(value = "Title") String title) {
@@ -24,8 +24,8 @@ public class IssuesRestTest {
         steps.shouldSeeIssueWithTitle(OWNER, REPO, title);
     }
 
-    @Story("Closing existing issue")
-    @DisplayName("[17] Close issue via api")
+    @Story("Close existing issue")
+    @DisplayName("[14] Close existing issue via API")
     @ParameterizedTest(name = " (parameterized)")
     @ValueSource(strings = {"First Note", "Second Note"})
     public void shouldDeleteUserNote(@Param(value = "Title") String title) {
