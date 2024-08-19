@@ -22,19 +22,11 @@ public class IssuesWebTest {
     public void startDriver() {
         steps.startDriver();
     }
+
     
     @Test
     @Story("Create new issue")
-    @DisplayName("[11] Adding note to advertisement")
-    public void shouldAddLabelToIssue() {
-        steps.openIssuesPage(OWNER, REPO);
-        steps.createIssueWithTitle(ISSUE_TITLE);
-        steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
-    }
-    
-    @Test
-    @Story("Create new issue")
-    @DisplayName("[12] Creating new issue for authorized user")
+    @DisplayName("[11] Create new issue")
     public void shouldCreateIssue() {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
@@ -43,7 +35,7 @@ public class IssuesWebTest {
 
     @Test
     @Story("Close existing issue")
-    @DisplayName("[13] Closing new issue for authorized user")
+    @DisplayName("[12] Close existing issue")
     public void shouldCloseIssue() {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
