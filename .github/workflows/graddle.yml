@@ -1,4 +1,4 @@
-name: Java
+name: testing.ato
 
 on:
   workflow_dispatch:
