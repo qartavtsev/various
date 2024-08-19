@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 @Feature("Pull Requests")
+@Layer("UI Tests")
 
 public class PullRequestsWebTest {
 
@@ -25,7 +26,7 @@ public class PullRequestsWebTest {
 
     @Test
     @Story("Create new pull request")
-    @DisplayName("[16] Create new pull request for authorized user")
+    @DisplayName("[15] Create new pull request")
     public void shouldCreatePullRequest() {
         steps.openPullRequestsPage(OWNER, REPO);
         steps.createPullRequestFromBranch(BRANCH);
@@ -34,7 +35,7 @@ public class PullRequestsWebTest {
 
     @Test
     @Story("Close existing pull request")
-    @DisplayName("[17] Close existing pull request for authorized user")
+    @DisplayName("[16] Close existing pull request")
     public void shouldClosePullRequest() {
         steps.openPullRequestsPage(OWNER, REPO);
         steps.createPullRequestFromBranch(BRANCH);
